@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>博客文章</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="components/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div id="navbar-container"></div>
+    <section class="blog-section" id="blog">
+        <div class="section-container">
+            <h2 class="section-title">博客文章</h2>
+            <p class="section-description">分享我的技术见解、项目经验和行业思考</p>
+            <div class="blog-grid">
+                <div class="blog-card blue">
+                    <div class="blog-info">
+                        <div class="blog-date">2022-04-15 · 15分钟</div>
+                        <h3>我在腾讯做地图数据融合的算法评测</h3>
+                        <p>传统互联网行业，评测并不多见，但算法上很常见，再结合近期爆🔥的大模型，主要测试手段就是评测，我将以前的评测项目整理了一下，温故知新</p>
+                        <div>
+                            <span class="tag">职场感悟</span>
+                            <span class="tag">测试经验</span>
+                        </div>
+                        <a href="https://ima.qq.com/note/share?shareId=_AsbNbKP8A6ULp4aaFNgNQ" class="blog-link">阅读全文 <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card green">
+                    <div class="blog-info">
+                        <div class="blog-date">2025-04-20 · 12分钟</div>
+                        <h3>爆火的大模型，该怎么测试？</h3>
+                        <p>前面提到了传统行业基于算法的评测，这里重点讲下大模型的测试思路。</p>
+                        <div>
+                            <span class="tag">测试经验</span>
+                            <span class="tag">大模型</span>
+                            <span class="tag">评测</span>
+                        </div>
+                        <a href="#" class="blog-link">阅读全文 <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <!-- 更多卡片... -->
+            </div>
+        </div>
+    </section>
+    <div id="footer-container"></div>
+    <script>
+    fetch('components/navbar.html')
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById('navbar-container').innerHTML = data;
+            // 让“博客文章”按钮高亮
+            const navLinks = document.querySelectorAll('.nav-links a');
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href') === 'blog.html') {
+                    link.classList.add('active');
+                }
+            });
+            // 可选：绑定点击事件，保证点击后高亮
+            navLinks.forEach(link => {
+                link.addEventListener('click', function() {
+                    navLinks.forEach(item => item.classList.remove('active'));
+                    this.classList.add('active');
+                });
+            });
+        });
+        fetch('components/footer.html').then(r=>r.text()).then(d=>{document.getElementById('footer-container').innerHTML=d;});
+    </script>
+</body>
+</html>

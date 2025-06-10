@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>个人简历</title>
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="online_resume.css">
+    <link rel="stylesheet" href="components/navbar.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <!-- 导入导航栏组件 -->
+    <div id="navbar-container"></div>
+
+    <!-- 简历顶部标题和下载按钮 -->
+    <div class="resume-topbar">
+        <div class="resume-title">个人简历</div>
+        <div class="resume-download">
+            <a href="resume2025.pdf" download>
+                <i class="fa fa-download"></i> 下载简历
+            </a>
+        </div>
+    </div>
+
+    <div class="header">
+        <img src="logo.jpg" alt="Profile Picture">
+        <h1>汤文杰</h1>
+        <p class="header-desc">测试开发 | 云账户（天津）测试组长 | 资深测试开发</p>
+    </div>
+    <div class="container">
+        <div class="content">
+            <!-- 联系方式卡片 -->
+            <div class="card">
+                <div class="section-title">联系方式</div>
+                <div class="contact-item">
+                    <div class="contact-icon">📱</div>
+                    <div>18813038798</div>
+                </div>
+                <div class="contact-item">
+                    <div class="contact-icon">✉️</div>
+                    <div>atmosphereqq@163.com</div>
+                </div>
+            </div>
+            
+            <!-- 教育背景卡片 -->
+            <div class="card">
+                <div class="section-title">教育背景</div>
+                <p><strong>北京邮电大学</strong>（2014 - 2017）</p>
+                <p>电子科学与技术 · 硕士</p>
+                
+                <p><strong>重庆邮电大学</strong>（2010 - 2014）</p>
+                <p>通信工程 · 本科</p>
+            </div>
+            
+            <!-- 技术专长卡片 -->
+            <div class="card">
+                <div class="section-title">技术专长</div>
+                <div class="tech-category">开发语言</div>
+                <div class="tags">
+                    <span>Python</span>
+                    <span>Java</span>
+                </div>
+                <div class="tech-category">测试框架</div>
+                <div class="tags">
+                    <span>JMeter</span>
+                    <span>Pytest</span>
+                </div>
+                <div class="tech-category">业务领域</div>
+                <div class="tags">
+                    <span>商城</span>
+                    <span>地图数据</span>
+                    <span>金融结算</span>
+                </div>
+            </div>
+            
+            <!-- 工作经历卡片 (跨越两列) -->
+            <div class="card card-full">
+                <div class="section-title">工作经历</div>
+                <div class="timeline">
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3 class="company">云账户（天津）</h3>
+                        <p class="position">测试组长</p>
+                        <p class="date">2022.05 - 至今</p>
+                        <ul>
+                            <li><b>负责</b>个体工商户注册、发票、资金结算等全链路的质量保障</li>
+                            <li><b>重构</b>自动化测试平台，引入场景/数据驱动/模拟测试等</li>
+                            <li><b>推动</b>业务All in One测试文档，典型缺陷案例分析</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3 class="company">腾讯（北京）</h3>
+                        <p class="position">测试开发工程师</p>
+                        <p class="date">2019.12 - 2022.05</p>
+                        <ul>
+                            <li><b>负责</b>地图数据质量，搭建腾讯地图内业融合算法的评测</li>
+                            <li><b>流水线</b>建设，完成包括代码扫描，单元测试等研发环节</li>
+                            <li><b>参与</b>A-SPICE L3的质量认证</li>
+                        </ul>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-dot"></div>
+                        <h3 class="company">小米（北京）</h3>
+                        <p class="position">测试开发工程师</p>
+                        <p class="date">2017.04 - 2019.12</p>
+                        <ul>
+                            <li><b>负责</b>小米商城、小米售后、小米数仓服务的质量保障</li>
+                            <li><b>负责</b>小米商城秒杀抢购业务、内部IM服务的性能评估</li>
+                            <li><b>主导</b>设计和开发高并发的性能测试平台</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 项目经验卡片 -->
+            <div class="card card-full">
+                <div class="section-title">项目经验</div>
+                <ul>
+                    <li>
+                        <strong>高并发性能测试平台（小米商城）</strong>：设计并实现百万QPS压测能力，支持秒杀抢购业务的性能评估，为内部IM服务提供性能测试支持。
+                    </li>
+                    <li>
+                        <strong>地图数据质量保障（腾讯地图）</strong>：负责外业采集、中业、内业制作全链路的质量保障，支持车信/电子眼等多任务场景的算法评测，参与A-SPICE L3质量认证工作。
+                    </li>
+                    <li>
+                        <strong>自动化测试平台（云账户）</strong>：重构自动化测试平台架构，引入场景/数据驱动/模拟测试等技术，落地接口覆盖率、代码覆盖率等质量标准。
+                    </li>
+                </ul>
+            </div>
+            
+            <!-- 著作与出版卡片 -->
+            <div class="card card-full">
+                <div class="section-title">核心优势</div>
+                <div class="publication-card">
+                    <div class="publication-item">
+                        <h3>资深测试开发</h3>
+                        <p>熟悉Python/Java，熟悉JMeter/Pytest等自动化测试框架，有百万QPS压测经验，有高并发开发、算法评测经验</p>
+                    </div>
+                    <div class="publication-item">
+                        <h3>团队管理</h3>
+                        <p>有4-6人团队管理经验，可通过质量度量和规范体系，持续推动质效提升</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div id="footer-container"></div>
+
+    <script>
+        // 加载导航栏组件
+        fetch('components/navbar.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('navbar-container').innerHTML = data;
+                // 让“在线简历”按钮高亮
+                const navLinks = document.querySelectorAll('.nav-links a');
+                navLinks.forEach(link => {
+                    link.classList.remove('active');
+                    if (link.getAttribute('href') === 'online_resume.html') {
+                        link.classList.add('active');
+                    }
+                });
+                // 可选：绑定点击事件，保证点击后高亮
+                navLinks.forEach(link => {
+                    link.addEventListener('click', function() {
+                        navLinks.forEach(item => item.classList.remove('active'));
+                        this.classList.add('active');
+                    });
+                });
+            });
+        // 加载页脚组件
+        fetch('components/footer.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('footer-container').innerHTML = data;
+            });
+    </script>
+    <script src="personal.js"></script>
+</body>
+</html>
