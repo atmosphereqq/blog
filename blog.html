@@ -6,6 +6,77 @@
     <link rel="stylesheet" href="index.css">
     <link rel="stylesheet" href="components/navbar.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css">
+    <style>
+        /* 两栏布局样式覆盖 */
+        .blog-grid {
+            grid-template-columns: repeat(2, 1fr) !important;
+            gap: 40px;
+        }
+        
+        /* 提高文字对比度 */
+        .blog-card {
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .blog-card .blog-info {
+            position: relative;
+            z-index: 2;
+        }
+        
+        .blog-card .blog-date {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 500;
+        }
+        
+        .blog-card h3 {
+            color: #ffffff;
+            font-weight: 700;
+            margin-bottom: 15px;
+        }
+        
+        .blog-card p {
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 400;
+            line-height: 1.6;
+        }
+        
+        .blog-card .tag {
+            background: rgba(255, 255, 255, 0.2);
+            color: #ffffff;
+            font-weight: 500;
+        }
+        
+        .blog-card .blog-link {
+            color: #ffffff;
+            font-weight: 600;
+            text-decoration: underline;
+        }
+        
+        /* 调整卡片背景色，使其更柔和 */
+        .blog-card.blue {
+            background: linear-gradient(135deg, #4a89dc 0%, #5e72e4 100%);
+        }
+        
+        .blog-card.green {
+            background: linear-gradient(135deg, #3cba92 0%, #0ba360 100%);
+        }
+        
+        .blog-card.purple {
+            background: linear-gradient(135deg, #8e44ad 0%, #9b59b6 100%);
+        }
+        
+        .blog-card.gray {
+            background: linear-gradient(135deg, #5d6d7e 0%, #34495e 100%);
+        }
+        
+        /* 响应式调整 */
+        @media (max-width: 768px) {
+            .blog-grid {
+                grid-template-columns: 1fr !important;
+            }
+        }
+    </style>
 </head>
 <body>
     <div id="navbar-container"></div>
@@ -28,6 +99,20 @@
                 </div>
                 <div class="blog-card green">
                     <div class="blog-info">
+                        <div class="blog-date">2025-06-10 · 8分钟</div>
+                        <h3>从救火到防火：质量建设的三个阶段与成本博弈</h3>
+                        <p>8年测试经验，看到3家互联网公司在不同发展阶段，质量建设时不同的侧重点。</p>
+                        <div>
+                            <span class="tag">测试经验</span>
+                            <span class="tag">质量</span>
+                            <span class="tag">效率</span>
+                            <span class="tag">成本</span>
+                        </div>
+                        <a href="https://ima.qq.com/note/share?shareId=_AscNbuO8giULJwWbFNlNg" class="blog-link">阅读全文 <i class="fa fa-external-link"></i></a>
+                    </div>
+                </div>
+                <div class="blog-card purple">
+                    <div class="blog-info">
                         <div class="blog-date">2025-04-20 · 12分钟</div>
                         <h3>爆火的大模型，该怎么测试？</h3>
                         <p>前面提到了传统行业基于算法的评测，这里重点讲下大模型的测试思路。</p>
@@ -49,7 +134,7 @@
         .then(response => response.text())
         .then(data => {
             document.getElementById('navbar-container').innerHTML = data;
-            // 让“博客文章”按钮高亮
+            // 让"博客文章"按钮高亮
             const navLinks = document.querySelectorAll('.nav-links a');
             navLinks.forEach(link => {
                 link.classList.remove('active');
