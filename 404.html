@@ -1,0 +1,19 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <script>
+    // 获取当前URL路径
+    var path = window.location.pathname;
+    
+    // 如果路径不以/结尾且不包含.，则可能是需要添加.html的路径
+    if (path.substr(-1) !== '/' && path.indexOf('.') === -1) {
+        // 重定向到带有.html的URL
+        window.location.href = path + '.html';
+    }
+    </script>
+</head>
+<body>
+    <h1>页面不存在</h1>
+    <p>正在尝试重定向...</p>
+</body>
+</html>
